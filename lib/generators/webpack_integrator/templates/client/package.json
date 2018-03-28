@@ -1,0 +1,9 @@
+{
+  "name": "webpack_integrator",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf ../public/webpack && NODE_ENV=development webpack --mode development -w --config webpack.config.js"
+  },
+  "dependencies": {
+  }
+}

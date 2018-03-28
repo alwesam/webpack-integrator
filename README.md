@@ -1,10 +1,19 @@
 # WebpackIntegrator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/webpack_integrator`. To experiment with that code, run `bin/console` for an interactive prompt.
+A custom Rails generator that does the minimum to integrate JavaScript/Webpack
+with Rails.  Look into Webpacker gem if you want a
 
-TODO: Delete this and the text above, and describe your gem
+## Known Issues
+
+There might be incompatibility issue between Foreman gem and the latest version
+of Thor.  If encountered, run bundle update to revert to earlier version of Thor
+that works well with Foreman.
 
 ## Installation
+
+Create a new Rails project
+
+    $ rails new myapp
 
 Add this line to your application's Gemfile:
 
@@ -16,19 +25,24 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Run generator
 
-    $ gem install webpack_integrator
+    $ rails generate webpack_integrator:install
 
-## Usage
+Notice the files and folders added to your rails directory.  This is what you
+need to integrate a frontend Webpack to your Rails api
 
-TODO: Write usage instructions here
+Finally, insert the following line in app/views/layouts/application.html.erb
+within the head tag
 
-## Development
+```ruby
+<%= javascript_include_tag '/webpack/index-bundle.js' %>
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+To launch page, use foreman
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+    $ foreman start -f Procfie.dev
 
 ## Contributing
 
