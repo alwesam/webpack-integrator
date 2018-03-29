@@ -1,7 +1,8 @@
 # WebpackIntegrator
 
-A custom Rails generator that does the minimum to integrate JavaScript/Webpack
-with Rails.  Look into Webpacker gem if you want a
+A custom Rails generator that does the minimum to start integrating JavaScript/Webpack
+with Rails.  Look into [Webpacker](https://github.com/rails/webpacker) for a
+more integrated solution.
 
 ## Known Issues
 
@@ -30,7 +31,8 @@ Run generator
     $ rails generate webpack_integrator:install
 
 Notice the files and folders added to your rails directory.  This is what you
-need to integrate a frontend Webpack to your Rails api
+need to start developing front-end JS components  in a separate client directory
+and bundle them using Webpack. 
 
 Finally, insert the following line in app/views/layouts/application.html.erb
 within the head tag
@@ -46,7 +48,7 @@ To launch page, use foreman
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/webpack_integrator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/alwesam/webpack_integrator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
